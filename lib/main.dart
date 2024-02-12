@@ -2,6 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vector_graphics/vector_graphics.dart';
+
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -50,7 +53,9 @@ class MyHomePage extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
+final Widget svg = SvgPicture(
+  const AssetBytesLoader('../media/hoox.svg')
+);
   final String title;
 
   @override
@@ -119,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Hoox',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            
           ],
           
         ),
